@@ -1,4 +1,3 @@
-![](https://images.microbadger.com/badges/version/gists/qbittorrent.svg) ![](https://images.microbadger.com/badges/image/gists/qbittorrent.svg) ![](https://img.shields.io/docker/stars/gists/qbittorrent.svg) ![](https://img.shields.io/docker/pulls/gists/qbittorrent.svg)
 
 #### Environment:
 
@@ -24,13 +23,13 @@
         -p 58023:58023 \
         -p 58023:58023/udp \
         -p 8999:8999 \
-        -v /path/data:/data
-        gists/qbittorrent
+        -v /path/data:/data \
+        pch18/qb
 
 #### Compose example:
 
     qbittorrent:
-        image: gists/qbittorrent
+        image: pch18/qb
         ports:
             - "8999:8999"
             - "58023:58023"
