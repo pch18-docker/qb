@@ -6,7 +6,8 @@ ARG LIBTORRENT_VER=1.2.5
 LABEL maintainer="pch18"
 
 ENV UID=1000 \
-    GID=1000
+    GID=1000 \
+    WEBUI_PORT=8999
 
 RUN set -ex && \
     apk add --no-cache su-exec && \
@@ -50,5 +51,5 @@ EXPOSE 58023 58023/udp 8999
 
 ENTRYPOINT ["/usr/bin/entrypoint.sh"]
 
-CMD ["--webui-port=8999"]
+
 
