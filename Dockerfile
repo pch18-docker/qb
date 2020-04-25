@@ -1,9 +1,9 @@
 FROM alpine:3.11
+LABEL maintainer="pch18"
 
 ARG QBITTORRENT_VER=4.2.3
 ARG LIBTORRENT_VER=1.2.5
 
-LABEL maintainer="pch18"
 
 ENV UID=1000 \
     GID=1000 \
