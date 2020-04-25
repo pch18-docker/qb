@@ -7,7 +7,7 @@ LABEL maintainer="pch18"
 
 ENV UID=1000 \
     GID=1000 \
-    WEBUI_PORT=8999
+    WEBUI_PORT=58999
 
 RUN set -ex && \
     apk add --no-cache su-exec && \
@@ -47,7 +47,7 @@ COPY rootfs /
 
 VOLUME [ "/data" ]
 
-EXPOSE 58023 58023/udp 8999
+EXPOSE 58023 58023/udp 58999
 
 ENTRYPOINT ["/usr/bin/entrypoint.sh"]
 
