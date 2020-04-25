@@ -15,4 +15,4 @@ mkdir -p /data/.config/qBittorrent
 
 chown -R qbittorrent:qbittorrent /data
 
-exec su-exec qbittorrent:qbittorrent /usr/bin/qbittorrent-nox "$@"
+exec su-exec qbittorrent:qbittorrent /usr/bin/qbittorrent-nox --webui-port="$WEBUI_PORT" "$@"
