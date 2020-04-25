@@ -22,7 +22,7 @@
         --name qbittorrent \
         -p 58023:58023 \
         -p 58023:58023/udp \
-        -p 8999:8999 \
+        -p 58999:58999 \
         -v /path/data:/data \
         pch18/qb
 
@@ -31,7 +31,7 @@
     qbittorrent:
         image: pch18/qb
         ports:
-            - "8999:8999"
+            - "58999:58999"
             - "58023:58023"
             - "58023:58023/udp"
         volumes:
