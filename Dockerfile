@@ -43,6 +43,10 @@ RUN set -ex && \
     apk del .build-deps && \
     rm -rf /tmp/*
 
+RUN apk add tzdata && \
+    cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
+    echo "Asia/Shanghai" > /etc/timezone
+    
 COPY rootfs /
 
 VOLUME [ "/data" ]
